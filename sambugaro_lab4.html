@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Evan Sambugaro 11-18-2021 -->
+<!-- 3 responsive images grid, button changes background, 2 media query -->
+<html>
+<head>
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<h1> Lab 4 </h1>
+<style>
+button {background-color: purple;
+	padding: 20px;
+	margin-left: 200px;
+	margin-top: 200px;
+	box-shadow: 10px 10px black;
+	}
+	
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 30px;
+}
+	
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+	}
+}
+
+@media screen and (min-width: 1020px) {
+  body {
+    background-color: lightblue;
+	}
+}
+
+
+
+</style>
+</head>
+
+<body>
+	<p>
+	<div onclick="window.alert('Triggered by Inline JS');"> Click Me </div>
+	</p>
+
+<script>
+	// Functioned to change the background color when the button is pressed //
+	function background_color_change_function() {
+	document.body.style.backgroundColor = "#FCBA12";
+	}
+	
+</script>
+
+	<button onclick="background_color_change_function()">Change color</button>
+
+	<div class="grid-container">
+		<div><img src="images/clouds.jpg" alt="clouds" width="100%" height="100%"></div>
+		<div><img src="images/chicago.jpg" alt="chicago" width="100%" height="100%"></div>
+		<div><img src="images/palmtree.jpg" alt="palmtree" width="100%" height="100%"></div>
+	</div>
+	
+	
+</body>
+</html>
